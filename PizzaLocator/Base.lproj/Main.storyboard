@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pEK-oU-RCc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pizza-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PizzaLocator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R4k-he-RqI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" textLabel="Gci-92-0Z3" detailTextLabel="e9l-0B-jgG" style="IBUITableViewCellStyleSubtitle" id="XN0-V2-feB">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XN0-V2-feB" id="XMt-VN-FxC">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gci-92-0Z3">
+                                                    <rect key="frame" x="15" y="1" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e9l-0B-jgG">
+                                                    <rect key="frame" x="15" y="22" width="59" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="90" width="360" height="216"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0dO-aR-Plz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lBf-ca-Ig5"/>
+                                </connections>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Distance to the closest four pizza joints." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgl-Y7-0gV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="306" width="360" height="191"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD6-Zy-CKn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="Nq3-lr-6Qb"/>
+                                </constraints>
+                                <state key="normal" title="Route Pizza Journey"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nq3-lr-6Qb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Nq3-lr-6Qb"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="routePizzaJourney:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPo-Sl-dqc"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gcH-iZ-hdf">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="walk"/>
+                                    <segment title="drive"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="496" width="400" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="selectWalkOrDrive:" destination="BYZ-38-t0r" eventType="valueChanged" id="qRS-dj-quT"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QD6-Zy-CKn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WY6-Rr-ATA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QD6-Zy-CKn" secondAttribute="trailing" constant="52" id="aVs-RP-BPz"/>
+                            <constraint firstItem="QD6-Zy-CKn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="pk4-fR-zdY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="R4k-he-RqI"/>
+                                <exclude reference="mgl-Y7-0gV"/>
+                                <exclude reference="QD6-Zy-CKn"/>
+                                <exclude reference="gcH-iZ-hdf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WY6-Rr-ATA"/>
+                                <exclude reference="aVs-RP-BPz"/>
+                                <exclude reference="pk4-fR-zdY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="R4k-he-RqI"/>
+                                <include reference="mgl-Y7-0gV"/>
+                                <include reference="QD6-Zy-CKn"/>
+                                <include reference="gcH-iZ-hdf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WY6-Rr-ATA"/>
+                                <include reference="aVs-RP-BPz"/>
+                                <include reference="pk4-fR-zdY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pizza" id="AVd-dZ-iPr">
+                        <barButtonItem key="rightBarButtonItem" title="🗺" id="eMi-lO-Kj9">
+                            <connections>
+                                <segue destination="rBf-h2-dl2" kind="show" id="oIf-6T-oDp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="gcH-iZ-hdf" id="bGb-WA-fco"/>
+                        <outlet property="tableView" destination="R4k-he-RqI" id="nhA-hQ-6ag"/>
+                        <outlet property="textView" destination="mgl-Y7-0gV" id="4Lm-Qw-Hen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186.5" y="337"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="CKu-P2-hCv">
+            <objects>
+                <viewController id="rBf-h2-dl2" customClass="MapViewController" customModule="PizzaLocator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jvg-SC-wNe"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKO-D5-HN5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="19A-ro-nZF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-wa-pN6">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rBf-h2-dl2" id="gze-vs-ReZ"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qbE-wa-pN6" firstAttribute="leading" secondItem="19A-ro-nZF" secondAttribute="leadingMargin" constant="-20" id="4UL-EL-VK8"/>
+                            <constraint firstItem="qbE-wa-pN6" firstAttribute="top" secondItem="19A-ro-nZF" secondAttribute="topMargin" id="Bri-Y7-qlF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qbE-wa-pN6" secondAttribute="trailing" constant="-20" id="LcA-g0-c2m"/>
+                            <constraint firstItem="FKO-D5-HN5" firstAttribute="top" secondItem="qbE-wa-pN6" secondAttribute="bottom" id="dpx-Uz-ivc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qbE-wa-pN6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="dpx-Uz-ivc"/>
+                                <exclude reference="4UL-EL-VK8"/>
+                                <exclude reference="Bri-Y7-qlF"/>
+                                <exclude reference="LcA-g0-c2m"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qbE-wa-pN6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="dpx-Uz-ivc"/>
+                                <include reference="4UL-EL-VK8"/>
+                                <include reference="Bri-Y7-qlF"/>
+                                <include reference="LcA-g0-c2m"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="qbE-wa-pN6" id="l70-Vp-R7B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kre-GS-3O6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.5" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n0f-ZP-PfU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pEK-oU-RCc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o1L-DM-5DM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RLu-xz-OtY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t43-Bt-SWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="997"/>
+        </scene>
+    </scenes>
+</document>
